@@ -22,3 +22,6 @@ export type MenuData = {
   availableToppings: Topping[];
   availablePizzas: Pizza[];
 };
+
+/** API / menu payload shape (alias of {@link MenuData}). */
+export type PizzaData = MenuData;
