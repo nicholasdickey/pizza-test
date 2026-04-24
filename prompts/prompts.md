@@ -1,6 +1,6 @@
 Create a Node / React / Vite project in the repo root.
 
-This is a hands-on interview exercise: pizza menu with Node BFF + React frontend. I’ll start simple and extend during pairing rather than overbuilding upfront.
+This is a hands-on interview exercise: pizza menu (US, use Domino's as a guide) with Node BFF + React frontend. I’ll start simple and extend during pairing rather than overbuilding upfront.
 
 ---
 
