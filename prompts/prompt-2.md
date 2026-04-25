@@ -10,4 +10,6 @@
 
    Handle loading state and add error display using the state var.
 
+   Use a cancellation guard (mounted flag) inside useEffect.
+
 3. Use unknown type for fetch data and then narrow the type to PizzaData before assigning into state.
