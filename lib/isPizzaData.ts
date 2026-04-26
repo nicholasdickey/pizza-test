@@ -21,17 +21,15 @@ function isTopping(value: unknown): value is Topping {
 function isPizza(value: unknown): value is Pizza {
   if (value === null || typeof value !== "object") return false;
   const p = value as Record<string, unknown>;
-  if (
-    typeof p.id !== "string" ||
-    typeof p.name !== "string" ||
-    typeof p.description !== "string" ||
-    typeof p.image !== "string" ||
-    !isSizeRecord(p.basePricesBySize) ||
-    !Array.isArray(p.toppings)
-  ) {
-    return false;
-  }
-  return p.toppings.every(isTopping);
+  return (
+    typeof p.id === "string" &&
+    typeof p.name === "string" &&
+    typeof p.description === "string" &&
+    typeof p.image === "string" &&
+    isSizeRecord(p.basePricesBySize) &&
+    Array.isArray(p.defaultToppingIds) &&
+    p.defaultToppingIds.every((id) => typeof id === "string")
+  );
 }
 
 export function isPizzaData(value: unknown): value is PizzaData {
@@ -40,7 +38,12 @@ export function isPizzaData(value: unknown): value is PizzaData {
   if (!Array.isArray(v.availableToppings) || !Array.isArray(v.availablePizzas)) {
     return false;
   }
-  return (
-    v.availableToppings.every(isTopping) && v.availablePizzas.every(isPizza)
+  if (!v.availableToppings.every(isTopping) || !v.availablePizzas.every(isPizza)) {
+    return false;
+  }
+
+  const toppingIds = new Set(v.availableToppings.map((t) => t.id));
+  return v.availablePizzas.every((pizza) =>
+    pizza.defaultToppingIds.every((id) => toppingIds.has(id)),
   );
 }

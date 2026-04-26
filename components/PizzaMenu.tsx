@@ -92,6 +92,7 @@ export function PizzaMenu() {
             <li key={pizza.id}>
               <PizzaCard
                 pizza={pizza}
+                availableToppings={menu.availableToppings}
                 isSelected={selectedId === pizza.id}
                 onSelect={() =>
                   setSelectedId((cur) => (cur === pizza.id ? null : pizza.id))

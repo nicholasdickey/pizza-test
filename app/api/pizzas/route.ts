@@ -6,7 +6,7 @@ import type { PizzaData } from "@/types/pizza";
 function loadMenu(): PizzaData {
   const raw = menu as unknown;
   if (!isPizzaData(raw)) {
-    throw new Error("data/menu.json does not match PizzaData shape");
+    throw new Error("data/menu.json does not match menu data shape");
   }
   return raw;
 }
