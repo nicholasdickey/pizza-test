@@ -89,7 +89,7 @@
     {
       "id": "deep-dish-supreme",
       "name": "Deep Dish Supreme",
-      "description": "A thick deep-dish crust loaded with sausage, mushrooms, onions, green peppers, and tomatoes.",
+      "description": "A thick deep-dish with sausage, mushrooms, onions, green peppers, and tomatoes.",
       "image": "https://images.unsplash.com/photo-1548369937-47519962c11a?w=800&q=80",
       "basePricesBySize": { "Small": 10.99, "Medium": 13.99, "Large": 16.99 },
       "defaultToppingIds": [
