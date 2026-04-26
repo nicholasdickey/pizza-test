@@ -75,7 +75,7 @@
       "name": "Spicy Pepperoni",
       "description": "Crisped pepperoni and jalapenos over mozzarella and tomato sauce.",
       "image": "https://images.unsplash.com/photo-1628840042765-356cda07504e?w=800&q=80",
-      "basePricesBySize": { "Small": 10.99, "Medium": 13.49, "Large": 15.99 },
+      "basePricesBySize": { "Small": 8.99, "Medium": 10.99, "Large": 12.99 },
       "defaultToppingIds": ["pepperoni", "jalapenos"]
     },
     {
@@ -83,20 +83,20 @@
       "name": "Meat Lovers",
       "description": "Pepperoni, Italian sausage, smoked ham, and bacon on a hand-tossed crust.",
       "image": "https://images.unsplash.com/photo-1594007654729-407eedc4be65?w=800&q=80",
-      "basePricesBySize": { "Small": 13.49, "Medium": 16.49, "Large": 19.49 },
+      "basePricesBySize": { "Small": 8.99, "Medium": 10.99, "Large": 12.99 },
       "defaultToppingIds": ["pepperoni", "sausage", "ham", "bacon"]
     },
     {
-      "id": "veggie-supreme",
-      "name": "Veggie Supreme",
-      "description": "Mushrooms, onions, green peppers, olives, and tomatoes for a fresh, savory slice.",
-      "image": "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?w=800&q=80",
-      "basePricesBySize": { "Small": 11.49, "Medium": 13.99, "Large": 16.49 },
+      "id": "deep-dish-supreme",
+      "name": "Deep Dish Supreme",
+      "description": "A thick deep-dish crust loaded with sausage, mushrooms, onions, green peppers, and tomatoes.",
+      "image": "https://images.unsplash.com/photo-1548369937-47519962c11a?w=800&q=80",
+      "basePricesBySize": { "Small": 10.99, "Medium": 13.99, "Large": 16.99 },
       "defaultToppingIds": [
+        "sausage",
         "mushrooms",
         "onions",
         "green-peppers",
-        "black-olives",
         "tomatoes"
       ]
     },
@@ -105,7 +105,7 @@
       "name": "Hawaiian",
       "description": "Sweet pineapple, smoked ham, and bacon over melted mozzarella.",
       "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80",
-      "basePricesBySize": { "Small": 11.99, "Medium": 14.49, "Large": 16.99 },
+      "basePricesBySize": { "Small": 8.99, "Medium": 10.99, "Large": 12.99 },
       "defaultToppingIds": ["pineapple", "ham", "bacon"]
     },
     {
@@ -113,7 +113,7 @@
       "name": "Margherita",
       "description": "Roma tomatoes and fresh basil on a mozzarella and tomato sauce base.",
       "image": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=800&q=80",
-      "basePricesBySize": { "Small": 10.49, "Medium": 12.99, "Large": 15.49 },
+      "basePricesBySize": { "Small": 8.99, "Medium": 10.99, "Large": 12.99 },
       "defaultToppingIds": ["tomatoes", "basil"]
     }
   ]

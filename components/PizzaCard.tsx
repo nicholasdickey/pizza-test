@@ -135,7 +135,7 @@ export function PizzaCard({
           onClick={(e) => e.stopPropagation()}
         >
           <div className="flex items-baseline justify-between text-sm text-neutral-600">
-            <span>Base ({size})</span>
+            <span>Pizza base ({size})</span>
             <span>${basePrice.toFixed(2)}</span>
           </div>
           <div className="flex items-baseline justify-between text-lg font-bold text-neutral-900">
