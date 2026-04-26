@@ -17,7 +17,6 @@ function loadMenuData(): MenuData {
 const data = loadMenuData();
 
 export function PizzaMenu() {
-  const [selectedId, setSelectedId] = useState<Pizza["id"] | null>(null);
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-10">
@@ -40,10 +39,6 @@ export function PizzaMenu() {
             <PizzaCard
               pizza={pizza}
               availableToppings={data.availableToppings}
-              isSelected={selectedId === pizza.id}
-              onSelect={() =>
-                setSelectedId((cur) => (cur === pizza.id ? null : pizza.id))
-              }
             />
           </li>
         ))}

@@ -10,16 +10,9 @@ const SIZES: Size[] = ["Small", "Medium", "Large"];
 type PizzaCardProps = {
   pizza: Pizza;
   availableToppings: Topping[];
-  isSelected: boolean;
-  onSelect: () => void;
 };
 
-export function PizzaCard({
-  pizza,
-  availableToppings,
-  isSelected,
-  onSelect,
-}: PizzaCardProps) {
+export function PizzaCard({ pizza, availableToppings }: PizzaCardProps) {
   const [size, setSize] = useState<Size>("Medium");
   const [selectedIds, setSelectedIds] = useState<Set<string>>(
     () => new Set(pizza.defaultToppingIds),
@@ -39,8 +32,7 @@ export function PizzaCard({
   }, [availableToppings, selectedIds]);
 
   const totalPrice = useMemo(
-    () =>
-      calculatePizzaTotal(pizza.basePricesBySize, size, selectedToppings),
+    () => calculatePizzaTotal(pizza.basePricesBySize, size, selectedToppings),
     [pizza.basePricesBySize, size, selectedToppings],
   );
 
@@ -48,12 +40,7 @@ export function PizzaCard({
 
   return (
     <article
-      onClick={onSelect}
-      className={`flex cursor-pointer flex-col overflow-hidden rounded-xl border-2 bg-white shadow-md transition-[border-color,box-shadow] ${
-        isSelected
-          ? "border-[#006491] shadow-lg ring-2 ring-[#006491]/30"
-          : "border-neutral-200 hover:border-neutral-300"
-      }`}
+      className={`flex cursor-pointer flex-col overflow-hidden rounded-xl border-2 bg-white shadow-md transition-[border-color,box-shadow] ${"border-neutral-200 hover:border-neutral-300"}`}
     >
       <div className="relative aspect-[4/3] w-full shrink-0 overflow-hidden bg-neutral-100">
         <Image
@@ -143,14 +130,12 @@ export function PizzaCard({
             <span className="text-[#E31837]">${totalPrice.toFixed(2)}</span>
           </div>
 
-          {isSelected ? (
-            <button
-              type="button"
-              className="w-full rounded-lg bg-[#E31837] py-3 text-center text-sm font-bold uppercase tracking-wide text-white shadow hover:bg-[#c41430] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#E31837]"
-            >
-              Add to Cart
-            </button>
-          ) : null}
+          <button
+            type="button"
+            className="w-full rounded-lg bg-[#E31837] py-3 text-center text-sm font-bold uppercase tracking-wide text-white shadow hover:bg-[#c41430] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#E31837]"
+          >
+            Add to Cart
+          </button>
         </div>
       </div>
     </article>
