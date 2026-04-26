@@ -31,6 +31,31 @@
       "pricesBySize": { "Small": 0.99, "Medium": 1.29, "Large": 1.59 }
     },
     {
+      "id": "ham",
+      "name": "Smoked Ham",
+      "pricesBySize": { "Small": 1.49, "Medium": 1.99, "Large": 2.49 }
+    },
+    {
+      "id": "pineapple",
+      "name": "Pineapple",
+      "pricesBySize": { "Small": 1.19, "Medium": 1.49, "Large": 1.79 }
+    },
+    {
+      "id": "black-olives",
+      "name": "Black Olives",
+      "pricesBySize": { "Small": 0.99, "Medium": 1.29, "Large": 1.59 }
+    },
+    {
+      "id": "jalapenos",
+      "name": "Jalapenos",
+      "pricesBySize": { "Small": 0.99, "Medium": 1.29, "Large": 1.59 }
+    },
+    {
+      "id": "basil",
+      "name": "Fresh Basil",
+      "pricesBySize": { "Small": 0.79, "Medium": 0.99, "Large": 1.19 }
+    },
+    {
       "id": "tomatoes",
       "name": "Roma Tomatoes",
       "pricesBySize": { "Small": 0.99, "Medium": 1.29, "Large": 1.59 }
@@ -38,26 +63,28 @@
   ],
   "availablePizzas": [
     {
-      "id": "hand-tossed-cheese",
-      "name": "Hand Tossed Cheese",
-      "description": "Classic crust, robust tomato sauce, and a generous layer of mozzarella.",
+      "id": "classic-cheese",
+      "name": "Classic Cheese",
+      "description": "A simple cheese pie with tomato sauce and a generous layer of mozzarella.",
       "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=800&q=80",
       "basePricesBySize": { "Small": 8.99, "Medium": 10.99, "Large": 12.99 },
-      "defaultToppingIds": [
-        "pepperoni",
-        "mushrooms",
-        "sausage",
-        "onions",
-        "green-peppers"
-      ]
+      "defaultToppingIds": []
+    },
+    {
+      "id": "spicy-pepperoni",
+      "name": "Spicy Pepperoni",
+      "description": "Crisped pepperoni and jalapenos over mozzarella and tomato sauce.",
+      "image": "https://images.unsplash.com/photo-1628840042765-356cda07504e?w=800&q=80",
+      "basePricesBySize": { "Small": 8.99, "Medium": 10.99, "Large": 12.99 },
+      "defaultToppingIds": ["pepperoni", "jalapenos"]
     },
     {
       "id": "meat-lovers",
       "name": "Meat Lovers",
-      "description": "Pepperoni, ham, beef, sausage, and bacon on a hand-tossed crust.",
-      "image": "https://images.unsplash.com/photo-1628840042765-356cda07504e?w=800&q=80",
+      "description": "Pepperoni, Italian sausage, smoked ham, and bacon on a hand-tossed crust.",
+      "image": "https://images.unsplash.com/photo-1594007654729-407eedc4be65?w=800&q=80",
       "basePricesBySize": { "Small": 8.99, "Medium": 10.99, "Large": 12.99 },
-      "defaultToppingIds": ["pepperoni", "sausage", "bacon"]
+      "defaultToppingIds": ["pepperoni", "sausage", "ham", "bacon"]
     },
     {
       "id": "deep-dish-supreme",
@@ -72,6 +99,22 @@
         "green-peppers",
         "tomatoes"
       ]
+    },
+    {
+      "id": "hawaiian",
+      "name": "Hawaiian",
+      "description": "Sweet pineapple, smoked ham, and bacon over melted mozzarella.",
+      "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80",
+      "basePricesBySize": { "Small": 8.99, "Medium": 10.99, "Large": 12.99 },
+      "defaultToppingIds": ["pineapple", "ham", "bacon"]
+    },
+    {
+      "id": "margherita",
+      "name": "Margherita",
+      "description": "Roma tomatoes and fresh basil on a mozzarella and tomato sauce base.",
+      "image": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=800&q=80",
+      "basePricesBySize": { "Small": 8.99, "Medium": 10.99, "Large": 12.99 },
+      "defaultToppingIds": ["tomatoes", "basil"]
     }
   ]
 }
