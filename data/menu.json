@@ -29,6 +29,11 @@
       "id": "green-peppers",
       "name": "Green Peppers",
       "pricesBySize": { "Small": 0.99, "Medium": 1.29, "Large": 1.59 }
+    },
+    {
+      "id": "tomatoes",
+      "name": "Roma Tomatoes",
+      "pricesBySize": { "Small": 0.99, "Medium": 1.29, "Large": 1.59 }
     }
   ],
   "availablePizzas": [
@@ -51,16 +56,22 @@
       "name": "Meat Lovers",
       "description": "Pepperoni, ham, beef, sausage, and bacon on a hand-tossed crust.",
       "image": "https://images.unsplash.com/photo-1628840042765-356cda07504e?w=800&q=80",
-      "basePricesBySize": { "Small": 12.99, "Medium": 15.99, "Large": 18.99 },
+      "basePricesBySize": { "Small": 8.99, "Medium": 10.99, "Large": 12.99 },
       "defaultToppingIds": ["pepperoni", "sausage", "bacon"]
     },
     {
-      "id": "veggie-supreme",
-      "name": "Veggie Supreme",
-      "description": "Mushrooms, onions, and green peppers for a fresh, savory slice.",
-      "image": "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?w=800&q=80",
-      "basePricesBySize": { "Small": 11.49, "Medium": 13.99, "Large": 16.49 },
-      "defaultToppingIds": ["mushrooms", "onions", "green-peppers"]
+      "id": "deep-dish-supreme",
+      "name": "Deep Dish Supreme",
+      "description": "A thick deep-dish crust loaded with sausage, mushrooms, onions, green peppers, and tomatoes.",
+      "image": "https://images.unsplash.com/photo-1548369937-47519962c11a?w=800&q=80",
+      "basePricesBySize": { "Small": 10.99, "Medium": 13.99, "Large": 16.99 },
+      "defaultToppingIds": [
+        "sausage",
+        "mushrooms",
+        "onions",
+        "green-peppers",
+        "tomatoes"
+      ]
     }
   ]
 }
