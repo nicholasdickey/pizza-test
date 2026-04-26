@@ -1,21 +1,19 @@
-import { readFile } from "node:fs/promises";
-import path from "node:path";
 import { NextResponse } from "next/server";
+import menu from "@/data/menu.json";
 import { isPizzaData } from "@/lib/isPizzaData";
 import type { PizzaData } from "@/types/pizza";
 
-async function loadMockPizzas(): Promise<PizzaData> {
-  const filePath = path.join(process.cwd(), "pizzaz-mock.json");
-  const raw = JSON.parse(await readFile(filePath, "utf8")) as unknown;
+function loadMenu(): PizzaData {
+  const raw = menu as unknown;
   if (!isPizzaData(raw)) {
-    throw new Error("pizzaz-mock.json does not match PizzaData shape");
+    throw new Error("data/menu.json does not match PizzaData shape");
   }
   return raw;
 }
 
 export async function GET() {
   try {
-    const data = await loadMockPizzas();
+    const data = loadMenu();
     return NextResponse.json(data);
   } catch {
     return NextResponse.json(
