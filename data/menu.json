@@ -38,32 +38,12 @@
       "description": "Classic crust, robust tomato sauce, and a generous layer of mozzarella.",
       "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=800&q=80",
       "basePricesBySize": { "Small": 8.99, "Medium": 10.99, "Large": 12.99 },
-      "toppings": [
-        {
-          "id": "pepperoni",
-          "name": "Pepperoni",
-          "pricesBySize": { "Small": 1.49, "Medium": 1.99, "Large": 2.49 }
-        },
-        {
-          "id": "mushrooms",
-          "name": "Fresh Mushrooms",
-          "pricesBySize": { "Small": 1.29, "Medium": 1.69, "Large": 1.99 }
-        },
-        {
-          "id": "sausage",
-          "name": "Italian Sausage",
-          "pricesBySize": { "Small": 1.49, "Medium": 1.99, "Large": 2.49 }
-        },
-        {
-          "id": "onions",
-          "name": "Red Onions",
-          "pricesBySize": { "Small": 0.99, "Medium": 1.29, "Large": 1.59 }
-        },
-        {
-          "id": "green-peppers",
-          "name": "Green Peppers",
-          "pricesBySize": { "Small": 0.99, "Medium": 1.29, "Large": 1.59 }
-        }
+      "defaultToppingIds": [
+        "pepperoni",
+        "mushrooms",
+        "sausage",
+        "onions",
+        "green-peppers"
       ]
     },
     {
@@ -72,23 +52,7 @@
       "description": "Pepperoni, ham, beef, sausage, and bacon on a hand-tossed crust.",
       "image": "https://images.unsplash.com/photo-1628840042765-356cda07504e?w=800&q=80",
       "basePricesBySize": { "Small": 12.99, "Medium": 15.99, "Large": 18.99 },
-      "toppings": [
-        {
-          "id": "pepperoni",
-          "name": "Pepperoni",
-          "pricesBySize": { "Small": 1.49, "Medium": 1.99, "Large": 2.49 }
-        },
-        {
-          "id": "sausage",
-          "name": "Italian Sausage",
-          "pricesBySize": { "Small": 1.49, "Medium": 1.99, "Large": 2.49 }
-        },
-        {
-          "id": "bacon",
-          "name": "Smoked Bacon",
-          "pricesBySize": { "Small": 1.59, "Medium": 2.09, "Large": 2.59 }
-        }
-      ]
+      "defaultToppingIds": ["pepperoni", "sausage", "bacon"]
     },
     {
       "id": "veggie-supreme",
@@ -96,23 +60,7 @@
       "description": "Mushrooms, onions, and green peppers for a fresh, savory slice.",
       "image": "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?w=800&q=80",
       "basePricesBySize": { "Small": 11.49, "Medium": 13.99, "Large": 16.49 },
-      "toppings": [
-        {
-          "id": "mushrooms",
-          "name": "Fresh Mushrooms",
-          "pricesBySize": { "Small": 1.29, "Medium": 1.69, "Large": 1.99 }
-        },
-        {
-          "id": "onions",
-          "name": "Red Onions",
-          "pricesBySize": { "Small": 0.99, "Medium": 1.29, "Large": 1.59 }
-        },
-        {
-          "id": "green-peppers",
-          "name": "Green Peppers",
-          "pricesBySize": { "Small": 0.99, "Medium": 1.29, "Large": 1.59 }
-        }
-      ]
+      "defaultToppingIds": ["mushrooms", "onions", "green-peppers"]
     }
   ]
 }

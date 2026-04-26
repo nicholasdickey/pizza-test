@@ -9,13 +9,21 @@ const SIZES: Size[] = ["Small", "Medium", "Large"];
 
 type PizzaCardProps = {
   pizza: Pizza;
+  availableToppings: Topping[];
   isSelected: boolean;
   onSelect: () => void;
 };
 
-export function PizzaCard({ pizza, isSelected, onSelect }: PizzaCardProps) {
+export function PizzaCard({
+  pizza,
+  availableToppings,
+  isSelected,
+  onSelect,
+}: PizzaCardProps) {
   const [size, setSize] = useState<Size>("Medium");
-  const [selectedIds, setSelectedIds] = useState<Set<string>>(() => new Set());
+  const [selectedIds, setSelectedIds] = useState<Set<string>>(
+    () => new Set(pizza.defaultToppingIds),
+  );
 
   const toggleTopping = useCallback((id: string) => {
     setSelectedIds((prev) => {
@@ -27,8 +35,8 @@ export function PizzaCard({ pizza, isSelected, onSelect }: PizzaCardProps) {
   }, []);
 
   const selectedToppings = useMemo((): Topping[] => {
-    return pizza.toppings.filter((t) => selectedIds.has(t.id));
-  }, [pizza.toppings, selectedIds]);
+    return availableToppings.filter((t) => selectedIds.has(t.id));
+  }, [availableToppings, selectedIds]);
 
   const totalPrice = useMemo(
     () =>
@@ -97,7 +105,7 @@ export function PizzaCard({ pizza, isSelected, onSelect }: PizzaCardProps) {
             Toppings
           </p>
           <ul className="flex flex-col gap-2">
-            {pizza.toppings.map((t) => {
+            {availableToppings.map((t) => {
               const on = selectedIds.has(t.id);
               const add = t.pricesBySize[size];
               return (

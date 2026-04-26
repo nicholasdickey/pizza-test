@@ -2,10 +2,19 @@
 
 import { useState } from "react";
 import menuData from "@/data/menu.json";
+import { isPizzaData } from "@/lib/isPizzaData";
 import type { MenuData, Pizza } from "@/types/pizza";
 import { PizzaCard } from "./PizzaCard";
 
-const data = menuData as MenuData;
+function loadMenuData(): MenuData {
+  const data = menuData as unknown;
+  if (!isPizzaData(data)) {
+    throw new Error("data/menu.json does not match menu data shape");
+  }
+  return data;
+}
+
+const data = loadMenuData();
 
 export function PizzaMenu() {
   const [selectedId, setSelectedId] = useState<Pizza["id"] | null>(null);
@@ -30,6 +39,7 @@ export function PizzaMenu() {
           <li key={pizza.id}>
             <PizzaCard
               pizza={pizza}
+              availableToppings={data.availableToppings}
               isSelected={selectedId === pizza.id}
               onSelect={() =>
                 setSelectedId((cur) => (cur === pizza.id ? null : pizza.id))

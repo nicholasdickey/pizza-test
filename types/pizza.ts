@@ -15,7 +15,8 @@ export type Pizza = {
   image: string;
   /** USD base price per size */
   basePricesBySize: Record<Size, number>;
-  toppings: Topping[];
+  /** Toppings selected by default, resolved from MenuData.availableToppings */
+  defaultToppingIds: Topping["id"][];
 };
 
 export type MenuData = {
